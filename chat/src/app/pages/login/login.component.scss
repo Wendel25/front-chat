@@ -1,0 +1,50 @@
+@import '../../app.component.scss';
+
+.login{
+  background: $blue;
+  background: linear-gradient(180deg, rgba(88,181,242,1) 25%, rgba(31,70,125,1) 85%);
+  height: 100vh;
+}
+
+.content {
+  padding: 2%;
+  background-color: #ffffffb3;
+  width: 20%;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 15px 29px -4px rgba(0,0,0,0.62);
+  -webkit-box-shadow: 1px 15px 29px -4px rgba(0,0,0,0.62);
+  -moz-box-shadow: 1px 15px 29px -4px rgba(0,0,0,0.62);
+}
+
+.title > h1{
+  text-align: center;
+  margin: 0 0 10% 0;
+  font-weight: bold;
+  font-family: $textFont;
+}
+
+mat-form-field{
+  width: 100%;
+  margin-top: 2%;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.text-help{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  cursor: pointer;
+}
+
+.text-help > span:hover{
+  color: $blue;
+}

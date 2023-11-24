@@ -1,0 +1,67 @@
+@import '../../app.component.scss';
+
+.content{
+  border: 2px solid $border;
+  width: 85%;
+  height: 88vh;
+  left: 14%;
+  bottom: 2%;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.form{
+  left: 2%;
+  width: 96%;
+  bottom: 2%;
+  position: absolute;
+}
+
+.field-send{
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-send-message{
+  width: 85%;
+  border: none;
+  background-color: $border;
+  border-radius: 20px;
+  padding: 1%;
+  font-family: sans-serif;
+}
+
+.field-send-message:focus{
+  outline: none;
+  box-shadow: 0 0 5px #7dbeea;
+}
+
+.btn-send{
+  background-color: $blue;
+  border: none;
+  width: 10%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-send:hover{
+  color: $text;
+}
+
+.mensagens {
+  background-color: #bbd7e9;
+  margin: 2%;
+  padding: 1%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.mensagens > span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Poppins';
+}

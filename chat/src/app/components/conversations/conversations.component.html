@@ -1,0 +1,14 @@
+<section class="content">
+  <form action="" class="form" (ngSubmit)="sendMessage()">
+    <div class="field-send">
+      <input class="field-send-message" placeholder="Digite..." [(ngModel)]="newMessage" name="newMessage">
+      <button type="submit" class="btn-send">
+        <mat-icon> send </mat-icon>
+      </button>
+    </div>
+  </form>
+
+  <div class="mensagens" *ngFor="let message of messages">
+    <span> {{ message }} </span>
+  </div>
+</section>

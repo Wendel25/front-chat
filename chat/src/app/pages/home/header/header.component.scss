@@ -1,0 +1,13 @@
+@import '../../../app.component.scss';
+
+mat-toolbar{
+  background-color: $blue;
+}
+
+.button-icon:hover{
+  color: $text;
+}
+
+.example-spacer {
+  flex: 1 auto;
+}

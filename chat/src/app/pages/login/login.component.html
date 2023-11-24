@@ -1,0 +1,44 @@
+<section class="login">
+  <div class="content">
+    <div class="title">
+      <h1>Login</h1>
+    </div>
+
+    <div class="content-field">
+      <form class="form">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <mat-icon matPrefix>email</mat-icon>
+          <input matInput placeholder="usuario@gmail.com.br" [(ngModel)]="email" name="email" required email>
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Por favor, insira um endereço de e-mail válido
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            O email é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-icon matPrefix>key</mat-icon>
+          <mat-label>Senha</mat-label>
+          <input type="password" matInput placeholder="abcd1234" [(ngModel)]="password" name="password" required>
+          <mat-error *ngIf="passwordFormControl.hasError('required')">
+            A senha é <strong>obrigatória</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <div class="btn">
+          <button mat-raised-button (click)="login()" color="primary">
+            <mat-icon matPrefix>login</mat-icon>
+            Entrar
+          </button>
+        </div>
+      </form>
+
+      <div class="text-help">
+        <span (click)="creatRegister()">Criar Conta</span>
+        <span (click)="newPassword()">Esqueci a senha</span>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<section class="login">
+  <div class="content">
+    <div class="title">
+      <h1>Criar Conta</h1>
+    </div>
+
+    <div class="content-field">
+      <form (ngSubmit)="submitRegistration()" class="form" [formGroup]="formRegisterUser" #formDir="ngForm">
+        <mat-form-field>
+          <mat-label>Nome</mat-label>
+          <input matInput placeholder="Usuário" formControlName="nameControl" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Sobrenome</mat-label>
+          <input matInput placeholder="Usuário" formControlName="lastNameControl" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="usuario@gmail.com.br" formControlName="emailFormControl" required email>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Senha</mat-label>
+          <input type="password" matInput placeholder="abcd1234" formControlName="passwordFormControl" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Confirma Senha</mat-label>
+          <input type="password" matInput placeholder="abcd1234" formControlName="confirmPasswordControl" (input)="checkPasswords()" required>
+        </mat-form-field>
+
+        <div class="btn">
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!formRegisterUser.valid"
+          >
+            Registrar
+          </button>
+        </div>
+      </form>
+
+      <div class="text-help">
+        <span (click)="back()">Voltar</span>
+      </div>
+    </div>
+  </div>
+</section>
